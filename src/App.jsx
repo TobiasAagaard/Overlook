@@ -5,6 +5,7 @@ import { Destinations } from "./pages/Destinations/Destinations";
 import { Resevation } from "./pages/Resevation/Resevation";
 import { Rooms } from "./pages/Rooms/Rooms";
 import { Login } from "./pages/Login/Login";
+import { PageNotFound } from "./pages/NotFound/PageNotFound";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/Resevation" element={<Resevation />} />
             <Route path="/Rooms" element={<Rooms />} />
             <Route path="/Login" element={<Login />} />
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
