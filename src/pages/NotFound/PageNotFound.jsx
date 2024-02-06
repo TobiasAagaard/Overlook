@@ -6,7 +6,7 @@ export const PageNotFound = () => {
         <ContentWrapper title="404 Page Not Found">
             <h1>404 Page Not Found</h1>
             <p>
-                <Link>Gå til forsiden her</Link>
+                <Link to="/">Gå til forsiden her</Link>
             </p>
         </ContentWrapper>
     </>

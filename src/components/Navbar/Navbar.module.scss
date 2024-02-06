@@ -1,0 +1,28 @@
+.navStyles {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    img {
+       margin: 1rem 0 1rem 10rem;
+    }
+    ul {
+        display: flex;
+        gap: 2rem;
+        margin: 0 10rem 1.4rem 0;
+        li {
+            display: flex;
+            align-items: flex-end;
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: #fff;
+                
+            }
+            &.active {
+                color: red;
+              }
+            
+        }
+    }
+    
+}

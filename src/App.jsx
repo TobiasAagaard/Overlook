@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.scss"
 import { MainLayout } from "./Layout/MainLayout";
 import { Frontpage } from "./pages/Frontpage/Frontpage";
 import { Destinations } from "./pages/Destinations/Destinations";
@@ -15,9 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Frontpage />} />
-            <Route path="/Destinations" element={<Destinations />} />
+            <Route path="/Destination" element={<Destinations />} />
             <Route path="/Resevation" element={<Resevation />} />
-            <Route path="/Rooms" element={<Rooms />} />
+            <Route path="/Værelser" element={<Rooms />} />
             <Route path="/Login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>
