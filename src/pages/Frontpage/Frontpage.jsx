@@ -1,5 +1,9 @@
+import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper"
+
 export const Frontpage = () => {
     return (
-        <h1>Frontpage</h1>
+        <ContentWrapper  title="Forside">
+            <h1>Frontpage</h1>
+        </ContentWrapper>
     )
 }
