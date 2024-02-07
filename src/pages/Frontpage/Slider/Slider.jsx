@@ -15,7 +15,7 @@ const Item = (props) => {
   const HeroSlider = () => {
     const carouselSettings = {
       animation: "fade",
-      interval: 1500,
+      interval: 4000,
       indicatorContainerProps: true,
       indicators: false
      
