@@ -10,7 +10,23 @@ const ImageSlider = [
         "id": 2,
         images: require("./SliderImages/city-houses-reykjavik.jpg"),
         "title": "City"
+    },
+    {
+        "id": 3,
+        images: require("./SliderImages/fishmarket-hamborg.jpg"),
+        "title": "City"
+    },
+    {
+        "id": 4,
+        images: require("./SliderImages/frankfurt-skyline-germany.jpg"),
+        "title": "City"
+    },
+    {
+        "id": 5,
+        images: require("./SliderImages/gdansk-center-church-poland.jpg"),
+        "title": "City"
     }
+    
     
 ]
 

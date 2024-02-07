@@ -1,5 +1,6 @@
 import Carousel from "react-material-ui-carousel";
 import  ImageSlider  from "./ImageSlider.js";
+import Styles from "./Slider.module.scss";
 
 const Item = (props) => {
     return (
@@ -14,13 +15,15 @@ const Item = (props) => {
   const HeroSlider = () => {
     const carouselSettings = {
       animation: "fade",
-      interval: 500,
-      navButtonsAlwaysInvisible: true
+      interval: 1500,
+      indicatorContainerProps: true,
+      indicators: false
+     
     };
   
   
     return (
-      <div className="slider-container">
+      <div className={Styles.sliderContainer}>
         <Carousel {...carouselSettings}>
           {ImageSlider.map((data) => (
             <Item key={data.id} item={data} />
