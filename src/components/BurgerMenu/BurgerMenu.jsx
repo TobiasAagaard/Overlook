@@ -11,7 +11,7 @@ export const BurgerMenu = () => {
 
     return(
         <>
-            <div className={menuOpen ? [Styles.menuStyle, Styles.start] : Styles.menuStyles} onClick={handleToggle}>
+            <div className={Styles.menuStyles} onClick={handleToggle}>
                 <span></span>
                 <span></span>
                 <span></span>

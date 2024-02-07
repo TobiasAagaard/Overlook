@@ -1,4 +1,8 @@
 
+ul {
+    display: none;
+}
+
 @media only screen and (max-width: 1200px) {
 .menuStyles {
     display: flex;
@@ -37,10 +41,6 @@
     }
 }
 
-ul {
-    display: none;
-}
-
 .open {
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@ ul {
     background-color: #000;
     li {
         list-style: none;
-        margin: 4.4rem;
+        margin: 1.5rem;
         a {
             text-decoration: none;
             color: #fff;
