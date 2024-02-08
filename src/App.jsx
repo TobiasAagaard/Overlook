@@ -3,7 +3,7 @@ import "./App.scss"
 import { MainLayout } from "./Layout/MainLayout";
 import { Frontpage } from "./pages/Frontpage/Frontpage";
 import { Destinations } from "./pages/Destinations/Destinations";
-import { HotelsList } from "./pages/Destinations/HotelsList/HotelsList";
+// import { HotelsList } from "./pages/Destinations/HotelsList/HotelsList";
 import { Resevation } from "./pages/Resevation/Resevation";
 import { Rooms } from "./pages/Rooms/Rooms";
 import { Login } from "./pages/Login/Login";
@@ -19,7 +19,7 @@ function App() {
             <Route index element={<Frontpage />} />
             <Route path="/Destination" element={<Destinations />} >
               <Route path=":slug">
-              <Route index element={<HotelsList />} />
+              {/* <Route index element={<HotelsList />} /> */}
               {/* <Route path=":city_id" element={<HotelDetails />} /> */}
             </Route>
             </Route>
