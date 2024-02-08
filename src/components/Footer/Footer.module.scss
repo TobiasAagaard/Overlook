@@ -1,0 +1,45 @@
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5vh;
+    background-color: #fff;
+
+    .footerNav {
+        display: flex;
+        gap: 2rem;
+        
+    }
+    ul {
+         li {
+             list-style: none;
+             a {
+                 text-decoration: none;
+                 color: #777;;
+             }
+         }
+     }
+}
+
+@media screen and (max-width: 1163px) {
+   footer {
+    p {
+        font-size: 0.8rem;
+    }
+
+    a {
+        font-size: 0.8rem;
+    }
+   }
+}
+
+@media screen and (max-width: 963px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .icons {
+            margin: 2rem 0;
+        }
+    }
+ }
