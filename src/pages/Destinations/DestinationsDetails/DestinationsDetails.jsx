@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
-import { Link }  from "react-router-dom";
+import { NavLink }  from "react-router-dom";
+import Styles from "./DestinationsDetails.module.scss"
 
 
 export const HotelsNav  = () => {
@@ -17,14 +17,14 @@ export const HotelsNav  = () => {
       }, [setData]);
 
       return (
-        <section>
+        <section className={Styles.hotelNavStyle}>
           {data &&
             data.map((data) => {
               return (
                 <li key={data.id}>
-                  <Link to={`/destinations/${data.slug}`} className="nav-link">
+                  <NavLink to={`/destinations/${data.slug}`} className="nav-link">
                     {data.name}
-                  </Link>
+                  </NavLink>
                 </li>
               );
             })}
