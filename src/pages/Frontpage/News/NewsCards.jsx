@@ -10,7 +10,6 @@ export const NewsCards = () => {
         const getNews = async () => {
             try {
                 const res = await axios(endpoint);
-                console.log(res)
                 setNews(res.data)
             } catch (err) {
                 console.error(err)
