@@ -9,8 +9,8 @@ export const Footer = () => {
     <footer>
         <p>© 2021 Hotel Overlook. Alle rettigheder forbeholdt.</p>
         <div className={Styles.icons}>
-        <FaFacebookSquare size={30} />
-        <FaSquareTwitter size={30}/>
+        <FaSquareTwitter size={35}/>
+        <FaFacebookSquare size={35} />
         </div>
         <div>
             <ul className={Styles.footerNav}>
