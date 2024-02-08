@@ -16,7 +16,12 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Frontpage />} />
-            <Route path="/Destination" element={<Destinations />} />
+            <Route path="/Destination" element={<Destinations />} >
+              <Route path=":slug">
+              <Route index element={<HotelList />} />
+              <Route path=":city_id" element={<HotelDetails />} />
+            </Route>
+            </Route>
             <Route path="/Resevation" element={<Resevation />} />
             <Route path="/Værelser" element={<Rooms />} />
             <Route path="/Login" element={<Login />} />
