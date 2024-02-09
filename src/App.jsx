@@ -18,7 +18,8 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Frontpage />} />
             <Route path="/Destination" element={<Destinations />} >
-            <Route path="/Destination/:slug" element={<HotelList />}>
+            <Route path=":slug">
+              <Route index element={<HotelList />} />
             </Route>
             </Route>
             <Route path="/Resevation" element={<Resevation />} />

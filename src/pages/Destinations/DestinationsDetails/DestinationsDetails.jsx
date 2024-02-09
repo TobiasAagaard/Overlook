@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { NavLink, useParams }  from "react-router-dom";
+import { NavLink, Link, useParams }  from "react-router-dom";
 import Styles from "./DestinationsDetails.module.scss"
 
 
@@ -38,7 +38,7 @@ const HotelsNav  = () => {
 }
 
 const HotelList = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
   const { slug } = useParams();
 
   useEffect(() => {
@@ -46,28 +46,19 @@ const HotelList = () => {
       const res = await axios.get(
         `http://localhost:4000/destinations/${slug}`
       );
-      setData(res.item);
+      setData(res.data);
       console.log(res)
     };
     getData();
   }, [slug]);
-
   return (
     <>
       <HotelsNav />
-      <figure>
-         {data && data.map((data) => {
-          return(
-          <div key={data.city.id}>
-            <h2>vores hoteller i {data.name}</h2>
-          </div>
-          )})}
-         
-      </figure>
     </>
   )
 };
 
 
-export {HotelsNav, HotelList}
+
+export {HotelsNav, HotelList,}
 
