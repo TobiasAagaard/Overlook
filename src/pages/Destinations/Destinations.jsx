@@ -1,3 +1,4 @@
+
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper"
 import { Header } from "../../components/Header/Header"
 import { HeroSlider } from "../Frontpage/Slider/Slider"
@@ -10,6 +11,7 @@ export const Destinations = () => {
             <HeroSlider />
             <section>
                 <HotelList />
+                
             </section>
         </ContentWrapper>
     )
