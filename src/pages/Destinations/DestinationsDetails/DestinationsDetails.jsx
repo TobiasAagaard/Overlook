@@ -7,7 +7,7 @@ import { Breadcrumbs } from "../../../components/Breadcrumbs/Breadcrumbs"
 
 
 
-const HotelsNav  = () => {
+export const HotelsNav  = () => {
     const [data, setData] = useState([]);
     const endpoint = "http://localhost:4000/destinations"
 
@@ -39,7 +39,7 @@ const HotelsNav  = () => {
       );
 }
 
-const HotelList = () => {
+export const HotelList = () => {
   const [data, setData] = useState();
   const { slug } = useParams();
 
@@ -84,5 +84,9 @@ const HotelList = () => {
 
 
 
-export {HotelsNav, HotelList,}
+
+
+
+
+
 

@@ -23,7 +23,7 @@ function App() {
             </Route>
             </Route>
             <Route path="/Resevation" element={<Resevation />} />
-            <Route path="/Værelser" element={<Rooms />} />
+            <Route element={<Rooms />} />
             <Route path="/Login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Route>

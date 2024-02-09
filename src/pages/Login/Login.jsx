@@ -13,13 +13,14 @@ export const Login = () => {
 
     
    
-    const loginRequest = async data => {
+    const loginRequest = async (data) => {
         const formData = new FormData();
         formData.append("username", data.username)
         formData.append("password", data.password)
 
+        const endpoint = `http://localhost:4000/login`;
         try {
-            const res = await axios.post(`http://localhost:4000/login`, formData)
+            const res = await axios.post(endpoint, formData)
             handleSessionData(res.data.access_token)
         }
         catch(err) {

@@ -15,7 +15,7 @@ export const Footer = () => {
         <div>
             <ul className={Styles.footerNav}>
                 <li><Link to="/">Forside</Link></li>
-                <li><Link to="/Destinationer">Hoteller & Destinationer</Link></li>
+                <li><Link to="/Destinationer/danmark">Hoteller & Destinationer</Link></li>
                 <li><Link to="Værelser">Værelser</Link></li>
                 <li><Link to="Resevation">Resevation</Link></li>
                 <li><Link to="Login">Login</Link></li>
