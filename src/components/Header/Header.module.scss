@@ -33,3 +33,53 @@ header {
 }
 }
 }
+@media only screen and (max-width: 960px) {
+    .container {
+        header {
+            left: 2vw;
+            .blackbg {
+                width: 500px;
+                height: 50px;
+                h1 {
+                    font-size: 1.2rem;
+                }
+            }
+            .redbg {
+                width: 400px;
+                height: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .container {
+        left: 0;
+        header {
+            left: 0;
+            .blackbg {
+                width: 100%;
+                border-radius: 0;
+                h1 {
+                    font-size: 4vw;
+                }
+            }
+            .redbg {
+                width: 100%;
+                border-radius: 0;
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 510px) { 
+    .container {
+        header {
+            top: 23vh;
+        }
+    }
+
+}
+
+

@@ -7,3 +7,12 @@
     
 }
 }
+
+@media only screen and (max-width: 500px) { 
+    .sliderContainer {
+        height: 400px;
+        img {
+            height: 400px;
+        }
+    }
+}

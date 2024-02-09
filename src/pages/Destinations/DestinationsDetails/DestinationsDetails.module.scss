@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2.5%;
     gap: 2rem;
     margin-bottom: 10rem;
-    height: 4vh;
+    max-height: 8vh;
     background: rgb(235,235,235);
     background: linear-gradient(90deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(235,235,235,1) 100%);
         
@@ -13,6 +14,7 @@
             a {
                 text-decoration: none;
                 color: #000;
+                font-size: 1rem;
                 &:hover {
                     transition: 0.2s ease-in-out;
                     color: #ff0000;
@@ -21,3 +23,24 @@
         }
     
 }
+
+@media only screen and (max-width: 614px) {
+    .hotelNavStyle {
+        li {
+            a {
+                font-size: 0.7rem;
+            } 
+        }
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .hotelNavStyle {
+        li {
+            a {
+                font-size: 0.4rem;
+            } 
+        }
+    }
+}
+

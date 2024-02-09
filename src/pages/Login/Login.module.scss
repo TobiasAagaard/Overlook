@@ -1,0 +1,44 @@
+.loginStyling {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    height: 74vh;
+    
+    .container {
+        margin-bottom: 2rem;
+        h1 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    input {
+        margin-bottom: 1rem;
+        padding: 0.6rem;
+        width: 20rem;
+        border-radius: 0.20rem;
+        border: 0;
+    }
+    .error {
+        display: inline;
+        color: #ff0000;
+        font-size: 1em;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .buttonContainer {
+        display: flex;
+        gap: 2%;
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            color: #eee;
+            background: rgba(254,6,6,1);
+            border-radius: 0.20rem;
+            border: 0;
+
+
+        }
+      }
+
+
+}

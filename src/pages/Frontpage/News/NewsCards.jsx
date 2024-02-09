@@ -4,9 +4,8 @@ import Styles from "./NewsCards.module.scss"
 
 export const NewsCards = () => {
     const [news, setNews] = useState([])
-
+    const endpoint = "http://localhost:4000/news"
     useEffect(() => {
-        const endpoint = "http://localhost:4000/news"
         const getNews = async () => {
             try {
                 const res = await axios(endpoint);
@@ -34,3 +33,5 @@ export const NewsCards = () => {
        </>
     )
 }
+
+

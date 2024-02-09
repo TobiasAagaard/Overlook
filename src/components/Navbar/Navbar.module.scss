@@ -3,7 +3,7 @@
     justify-content: space-between;
     background-color: #000;
     img {
-       margin: 1rem 0 1rem 10rem;
+       margin: 1rem 0 1rem 10%;
     }
     ul {
         display: flex;
@@ -30,6 +30,15 @@
     .navStyles {
         ul {
             display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .navStyles {
+        padding: 0.5rem;
+        img {
+            width: 10rem;
         }
     }
 }

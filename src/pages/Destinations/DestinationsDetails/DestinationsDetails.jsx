@@ -1,20 +1,25 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { NavLink }  from "react-router-dom";
+import { NavLink, useParams }  from "react-router-dom";
 import Styles from "./DestinationsDetails.module.scss"
 
 
-export const HotelsNav  = () => {
+
+const HotelsNav  = () => {
     const [data, setData] = useState([]);
+    const endpoint = "http://localhost:4000/destinations"
 
     useEffect(() => {
         const getData = async () => {
-          const res = await axios.get(`http://localhost:4000/destinations`);
-          console.log(res)
+          try {
+          const res = await axios.get(endpoint);
           setData(res.data);
+        } catch (err) {
+          console.error(err)
+        }
         } 
         getData();
-      }, [setData]);
+      }, []);
 
       return (
         <section className={Styles.hotelNavStyle}>
@@ -30,6 +35,39 @@ export const HotelsNav  = () => {
             })}
         </section>
       );
-    
 }
+
+const HotelList = () => {
+  const [data, setData] = useState([]);
+  const { slug } = useParams();
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await axios.get(
+        `http://localhost:4000/destinations/${slug}`
+      );
+      setData(res.item);
+      console.log(res)
+    };
+    getData();
+  }, [slug]);
+
+  return (
+    <>
+      <HotelsNav />
+      <figure>
+         {data && data.map((data) => {
+          return(
+          <div key={data.city.id}>
+            <h2>vores hoteller i {data.name}</h2>
+          </div>
+          )})}
+         
+      </figure>
+    </>
+  )
+};
+
+
+export {HotelsNav, HotelList}
 
