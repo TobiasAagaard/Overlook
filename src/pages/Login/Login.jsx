@@ -14,7 +14,7 @@ export const Login = () => {
     
    
     const loginRequest = async (data) => {
-        const formData = new FormData();
+        const formData = new URLSearchParams();
         formData.append("username", data.username)
         formData.append("password", data.password)
 
@@ -22,6 +22,7 @@ export const Login = () => {
         try {
             const res = await axios.post(endpoint, formData)
             handleSessionData(res.data.access_token)
+            console.log(res)
         }
         catch(err) {
             console.error('Kunne ikke logge ind')
@@ -44,10 +45,10 @@ export const Login = () => {
 
         console.log("Logget ud korrekt")
     }
-
+    
     return (
         <ContentWrapper title="Login">
-            {!loginData && !loginData.username ?
+            {!loginData  ?
             (
                     <form onSubmit={handleSubmit(loginRequest)} className={Styles.loginStyling}>
                         <div className={Styles.container}> 
@@ -73,7 +74,7 @@ export const Login = () => {
             
             ) : (
             <div>
-                   <h1>{loginData.username} er logget ind</h1>
+                   <h1>Du er logget ind</h1>
                     <button onClick={LogOut}>Log ud</button>
             </div>
 

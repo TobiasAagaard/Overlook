@@ -8,17 +8,15 @@ export const Breadcrumbs = () => {
     const crumbs = location.pathname.split('/')
     .filter(crumb => crumb !== '')
     .map(crumb => {
-        
-        
         return(
-            <div >
+            <div>
                 {crumb}
             </div>
         )
     })
     return (
         <div>
-            <p>{crumbs}</p>
+            {crumbs}
         </div>
     )
 }
