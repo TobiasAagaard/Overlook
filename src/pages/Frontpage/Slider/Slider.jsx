@@ -17,9 +17,7 @@ const Item = (props) => {
       animation: "slide",
       duration: 800,
       interval: 6000,
-      indicatorContainerProps: true,
       indicators: false,
-     
     };
   
   
